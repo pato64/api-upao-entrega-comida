@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import org.yaml.snakeyaml.events.Event;
 
 @Entity
 @Table(name = "platillos")
@@ -12,14 +11,16 @@ import org.yaml.snakeyaml.events.Event;
 @NoArgsConstructor
 @ToString
 
-public class food {
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String nombre;
+public class Food {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public String nombre;
 
-@Column(name = "descripcion",nullable = false)
-    private String descripcion;
+    @Column(name = "descripcion",nullable = false)
+    public String descripcion;
 
     @Column(name = "precio",nullable = false)
-    private String precio;
+    public String precio;
+
+
 }
